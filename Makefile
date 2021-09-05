@@ -7,7 +7,7 @@ OBJDIR = ./obj
 LIB_PATH = ./libft
 INCLUDES = ./includes
 
-SOURCES_FILE = ft_printf.c
+SOURCES_FILE = ft_printf.c ft_fill.c reset_option.c ft_placeholder.c screen_d.c annex1.c annex2.c screen_c.c screen_s.c
 OBJFILE = $(SOURCES_FILE:.c=.o)
 OBJECTS = $(addprefix $(OBJDIR)/,$(OBJFILE))
 
