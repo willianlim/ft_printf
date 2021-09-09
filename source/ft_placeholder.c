@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_placeholder.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wrosendo <wrosendo@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/09 17:37:12 by wrosendo          #+#    #+#             */
+/*   Updated: 2021/09/09 17:37:24 by wrosendo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_printf.h"
 
 int	ft_placeholder(t_option *opt)
@@ -11,5 +23,13 @@ int	ft_placeholder(t_option *opt)
 		i = screen_d(opt);
 	else if ((*opt).type == 's')
 		i = screen_s(opt);
+	else if ((*opt).type == 'u')
+		i = screen_u(opt);
+	else if ((*opt).type == 'x' || (*opt).type == 'X')
+		i = screen_x(opt);
+	else if ((*opt).type == 'p')
+		i = screen_p(opt);
+	else if ((*opt).type == '%')
+		i = screen_percent(opt);
 	return (i);
 }

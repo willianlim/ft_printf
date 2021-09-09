@@ -1,10 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   annex2.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wrosendo <wrosendo@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/09 17:36:06 by wrosendo          #+#    #+#             */
+/*   Updated: 2021/09/09 18:08:55 by wrosendo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_printf.h"
 
 void	precision_width(t_option *opt)
 {
 	int	dif;
 
-	if ((*opt).precision > ft_strlen((*opt).number) && (*opt).width > ft_strlen((*opt).number))
+	if ((*opt).precision > ft_strlen((*opt).number) && \
+	(*opt).width > ft_strlen((*opt).number))
 	{
 		if ((*opt).precision > (*opt).width)
 		{
@@ -94,14 +107,7 @@ int	with_flag_minus(t_option *opt)
 	return ((*opt).i);
 }
 
-int	with_flag_zero(t_option *opt)
-{
-	width_zero(opt);
-	free((*opt).number);
-	return ((*opt).i);
-}
-
-int		no_flag(t_option *opt)
+int	no_flag(t_option *opt)
 {
 	precision_width(opt);
 	precision(opt);

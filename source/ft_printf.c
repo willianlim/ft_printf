@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wrosendo <wrosendo@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/09 17:37:31 by wrosendo          #+#    #+#             */
+/*   Updated: 2021/09/09 17:42:57 by wrosendo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_printf.h"
 
 int	ft_parse(const char *tmp)
@@ -52,8 +64,8 @@ int	ft_vprintf(const char *format, t_option opt)
 
 int	ft_printf(const char *format, ...)
 {
-	t_option opt;
-	int done;
+	t_option	opt;
+	int			done;
 
 	ft_memset(&opt, 0, sizeof(opt));
 	va_start(opt.ap, format);

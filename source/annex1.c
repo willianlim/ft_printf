@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   annex1.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wrosendo <wrosendo@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/09 17:35:57 by wrosendo          #+#    #+#             */
+/*   Updated: 2021/09/09 17:36:00 by wrosendo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_printf.h"
 
 void	exec(t_option *opt)
@@ -15,7 +27,8 @@ void	exec(t_option *opt)
 	else if (!(*opt).j)
 	{
 		(*opt).i = ft_strlen((*opt).number);
-		if ((*opt).number[0] == '0' && !(*opt).precision && (*opt).point_precision)
+		if ((*opt).number[0] == '0' && \
+		!(*opt).precision && (*opt).point_precision)
 			(*opt).i = 0;
 	}
 }
@@ -24,7 +37,8 @@ void	verify(t_option *opt)
 {
 	int	len;
 
-	if ((*opt).number[0] == '-' && (*opt).precision && (*opt).point_precision && !(*opt).j)
+	if ((*opt).number[0] == '-' && (*opt).precision \
+	&& (*opt).point_precision && !(*opt).j)
 	{
 		len = ft_strlen((*opt).number);
 		(*opt).i += len;
@@ -71,9 +85,11 @@ void	width_space(t_option *opt)
 {
 	int	len;
 
-	if ((*opt).width >= ft_strlen((*opt).number) && (*opt).width > (*opt).precision && !(*opt).j)
+	if ((*opt).width >= ft_strlen((*opt).number) && \
+	(*opt).width > (*opt).precision && !(*opt).j)
 	{
-		if ((*opt).number[0] == '0' && !(*opt).precision && (*opt).point_precision)
+		if ((*opt).number[0] == '0' && \
+		!(*opt).precision && (*opt).point_precision)
 			len = (*opt).width;
 		else
 			len = (*opt).width - ft_strlen((*opt).number);
