@@ -6,7 +6,7 @@
 /*   By: wrosendo <wrosendo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 17:37:58 by wrosendo          #+#    #+#             */
-/*   Updated: 2021/09/09 17:43:57 by wrosendo         ###   ########.fr       */
+/*   Updated: 2021/09/17 20:03:16 by wrosendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ void	pointer_space(char *s, t_option *opt)
 
 int	screen_p(t_option *opt)
 {
-	unsigned long long int	n;
-	char					*s;
-	char					*hash;
+	unsigned long	n;
+	char			*s;
+	char			*hash;
 
 	hash = HASH_LOWER;
-	n = va_arg((*opt).ap, unsigned long long int);
+	n = va_arg((*opt).ap, unsigned long);
 	s = itoa_hex(n, HEX_LOWER);
 	if ((*opt).flag_minus)
 	{

@@ -6,7 +6,7 @@
 /*   By: wrosendo <wrosendo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 17:38:21 by wrosendo          #+#    #+#             */
-/*   Updated: 2021/09/09 17:38:22 by wrosendo         ###   ########.fr       */
+/*   Updated: 2021/09/17 15:27:39 by wrosendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,11 @@ void	lower_upper(t_option *opt)
 
 int	screen_x(t_option *opt)
 {
-	unsigned long int	n;
+	unsigned int	n;
 	char				*s;
 	char				*tmp;
 
-	n = va_arg((*opt).ap, unsigned long int);
+	n = va_arg((*opt).ap, unsigned int);
 	lower_upper(opt);
 	tmp = (*opt).hash;
 	s = itoa_hex(n, (*opt).hex);

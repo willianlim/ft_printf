@@ -6,20 +6,19 @@
 /*   By: wrosendo <wrosendo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 17:38:16 by wrosendo          #+#    #+#             */
-/*   Updated: 2021/09/17 12:35:41 by wrosendo         ###   ########.fr       */
+/*   Updated: 2021/09/17 16:13:03 by wrosendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-static int	count(long long int n)
+static unsigned int	count(unsigned int n)
 {
-	int	len;
+	unsigned int	len;
 
-	if (n <= 0)
-		len = 1;
-	else
-		len = 0;
+	len = 0;
+	if (n == 0)
+		return (1);
 	while (n)
 	{
 		n /= 10;
@@ -28,32 +27,21 @@ static int	count(long long int n)
 	return (len);
 }
 
-char	*u_itoa(long long int n)
+char	*u_itoa(unsigned int n)
 {
-	long long int	len;
-	int			neg;
-	char		*tmp;
+	unsigned int	len;
+	char			*tmp;
 
-	neg = 0;
-	if (n > 4294967295)
-		return (ft_strdup(u_itoa(n - 4294967296)));
 	len = count(n);
 	tmp = malloc(sizeof(char) * (len + 1));
 	if (tmp == NULL)
 		return (NULL);
 	tmp[len] = '\0';
-	if (n < 0)
-	{
-		neg = 1;
-		n *= -1;
-	}
-	while (--len >= neg)
+	while (len--)
 	{
 		tmp[len] = (n % 10) + '0';
 		n /= 10;
 	}
-	if (neg)
-		tmp[len] = '-';
 	return (tmp);
 }
 
@@ -66,9 +54,9 @@ static void	disable_flags(t_option *opt)
 int	screen_u(t_option *opt)
 {
 	char		*s;
-	long long int	n;
+	unsigned int	n;
 
-	n = va_arg((*opt).ap, long long int);
+	n = va_arg((*opt).ap,unsigned int);
 	s = u_itoa(n);
 	(*opt).number = s;
 	disable_flags(opt);

@@ -6,13 +6,13 @@
 /*   By: wrosendo <wrosendo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 17:35:28 by wrosendo          #+#    #+#             */
-/*   Updated: 2021/09/09 18:09:00 by wrosendo         ###   ########.fr       */
+/*   Updated: 2021/09/17 20:06:10 by wrosendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-static int	count(unsigned long int n)
+static int	count(unsigned long n)
 {
 	int	len;
 
@@ -47,16 +47,14 @@ char	*strrev(char *str)
 	return (str);
 }
 
-char	*itoa_hex(unsigned long int n, char *hex)
+char	*itoa_hex(unsigned long n, char *hex)
 {
 	int		len;
-	int		neg;
 	char	*tmp;
 	int		base;
 	int		i;
 
 	i = 0;
-	neg = 0;
 	base = ft_strlen(hex);
 	if (n == 0)
 		return (ft_strdup("0"));

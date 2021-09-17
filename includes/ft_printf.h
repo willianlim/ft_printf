@@ -6,7 +6,7 @@
 /*   By: wrosendo <wrosendo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 17:53:16 by wrosendo          #+#    #+#             */
-/*   Updated: 2021/09/16 16:16:27 by wrosendo         ###   ########.fr       */
+/*   Updated: 2021/09/17 20:06:42 by wrosendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void			u_width_precision(int n, char *s, t_option *opt);
 void			u_flag_no(int n, char *s, t_option *opt);
 void			u_minus_flag(int n, char *s, t_option *opt);
 
-char			*itoa_hex(unsigned long int n, char *hex);
+char			*itoa_hex(unsigned long n, char *hex);
 int				with_flag_zero(t_option *opt);
 
 #endif
