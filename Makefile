@@ -1,4 +1,4 @@
-CC = gcc
+CC = clang
 NAME = libftprintf.a
 CFLAGS = -Wall -Wextra -Werror -c
 LIBFT = libft.a
@@ -14,25 +14,23 @@ OBJECTS = $(addprefix $(OBJDIR)/,$(OBJFILE))
 all:$(NAME)
 
 $(NAME):$(OBJECTS)
-	make -C $(LIB_PATH)
+	$(MAKE) -C $(LIB_PATH)
 	cp $(LIB_PATH)/$(LIBFT) $(NAME)
-#	cp ./libft      /li
-#	$(CC) -g3 $(CFLAGS) $(SRCS) -I$(INCLUDES)
-	ar rc $(NAME) $(OBJECTS)
+	ar rcs $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 
 $(OBJDIR)/%.o: $(SOURCEDIR)/%.c
-	$(CC) -I./includes -c $< -o $@
+	mkdir -p ./obj
+	$(CC) -c $< -I ./includes -o $@
 
 bonus: re
 
 clean:
-	@/bin/rm -f $(OBJECTS)
-	@make clean -C $(LIB_PATH)
-
+	$(RM) -r ./obj
+	$(MAKE) fclean -C $(LIB_PATH)
 
 fclean: clean
-	@/bin/rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 

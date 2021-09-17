@@ -6,7 +6,7 @@
 /*   By: wrosendo <wrosendo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 17:36:12 by wrosendo          #+#    #+#             */
-/*   Updated: 2021/09/09 17:40:50 by wrosendo         ###   ########.fr       */
+/*   Updated: 2021/09/16 21:13:19 by wrosendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ int	s_width(char *str, t_option *opt)
 			return ((*opt).i);
 		}
 	}
+	return ((*opt).i);
 }
 
 int	null_width(char *str, t_option *opt)

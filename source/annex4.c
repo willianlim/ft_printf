@@ -6,7 +6,7 @@
 /*   By: wrosendo <wrosendo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 17:36:18 by wrosendo          #+#    #+#             */
-/*   Updated: 2021/09/09 17:36:59 by wrosendo         ###   ########.fr       */
+/*   Updated: 2021/09/16 21:14:37 by wrosendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ int	u_print_zero(int n, t_option *opt)
 	(*opt).i += dif;
 	while (dif--)
 		write(1, "0", 1);
+	return ((*opt).i);
 }
 
 void	u_minus_width(t_option *opt)
@@ -91,4 +92,5 @@ int	u_zero_width(int n, t_option *opt)
 	(*opt).i += dif;
 	while (dif--)
 		write(1, "0", 1);
+	return ((*opt).i);
 }
