@@ -18,15 +18,12 @@ $(NAME):$(OBJECTS)
 	cp $(LIB_PATH)/$(LIBFT) $(NAME)
 	ar rcs $(NAME) $(OBJECTS)
 	ranlib $(NAME)
-	gcc -g ./tests/06_main_test_p.c ./obj/*.o ./libft/libft.h ./libft/*.c
-	valgrind ./a.out
-
 
 $(OBJDIR)/%.o: $(SOURCEDIR)/%.c
 	mkdir -p ./obj
 	$(CC) -g -c $< -I ./includes -o $@
 
-bonus: re
+bonus: all
 
 clean:
 	$(RM) -r ./obj

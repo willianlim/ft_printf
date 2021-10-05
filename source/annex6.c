@@ -6,7 +6,7 @@
 /*   By: wrosendo <wrosendo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 17:35:28 by wrosendo          #+#    #+#             */
-/*   Updated: 2021/09/17 20:06:10 by wrosendo         ###   ########.fr       */
+/*   Updated: 2021/09/17 21:25:49 by wrosendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char	*itoa_hex(unsigned long n, char *hex)
 	if (n == 0)
 		return (ft_strdup("0"));
 	len = count(n);
-	tmp = calloc(len, sizeof(char));
+	tmp = ft_calloc(len + 1, sizeof(char));
 	if (tmp == NULL)
 		return (NULL);
 	while (n != 0)
