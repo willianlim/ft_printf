@@ -25,10 +25,6 @@
 	- [Format Specifier - Unsigned](#Format-Specifier---Unsigned)
 6. [Code of Willian](#Code-of-Willian)
 7. [Reference](#Reference)
-	- [printf](#printf)
-	- [Variable Argument](#Variable-Argument)
-	   - [](#)
-	   - [](#)
 8. [Tester](#Tester)
 
 
@@ -70,6 +66,9 @@ The format specifier that appears after % is a form that receives various option
 | # | o, x and X conversions are preceded with 0, 0x or 0X respectively |
 | 0 | Pads with zeros instead of the default spaces
 
+### Variable Argument
+sadfsadfsdfsdf
+
 ### Code of Willian
 
 - [`Makefile`](Makefile)
@@ -94,10 +93,23 @@ Conversion functions
 - [`screen_x.c`](source/screen_x.c)
 
 ### Reference
+<h4>printf</h4>
 
-#### printf
 [Format specification syntax](https://docs.microsoft.com/pt-br/cpp/c-runtime-library/format-specification-syntax-printf-and-wprintf-functions?view=msvc-160)
+
 [printf](http://www.cplusplus.com/reference/cstdio/printf/)
 
-#### Variable Argument
+<h4>Variable Argument</h4>
+
 [va_arg, va_copy, va_end, va_start](https://docs.microsoft.com/pt-br/cpp/c-runtime-library/reference/va-arg-va-copy-va-end-va-start?view=msvc-160)
+
+[What is the format of the va_list structure?](https://stackoverflow.com/questions/4958384/what-is-the-format-of-the-x86-64-va-list-structure)
+
+[System V Application Binary Interface](https://web.archive.org/web/20160801075139/http://www.x86-64.org/documentation/abi.pdf)
+
+[python tutor](https://pythontutor.com/visualize.html#mode=edit)
+
+### Tester
+[ft_printf tester Paulo](https://github.com/paulo-santana/ft_printf_tester)
+
+[ft_printf tester Tripouille](https://github.com/Tripouille/printfTester)
