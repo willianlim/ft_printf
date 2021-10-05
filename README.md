@@ -1,11 +1,11 @@
 # ft_printf: int   ft_printf(format, ...);
 
 ## Table of Contents
-1. [Project outline](#Projeto-outline)
+1. [Project outline](#Project-outline)
 2. [Printf Format Placeholder](#Printf-Format-Placeholder)
 	- [Printf Format Placeholder Syntax](#Printf-Format-Placeholder-Syntax)
 	- [Conversion](#Conversion)
-	- [Flags](#step-3-running-root-privileged-commands)
+	- [Flags](#Flags)
 3. [Variable Argument](#Variable-Argument)
 	- [What is Variable Argument?](#What-is-Variable-Argument?)
 	- [Variadic Function Format](#Variadic-Function-Format)
@@ -23,16 +23,16 @@
 	- [Format Specifier - Interger](#Format-Specifier---Interger)
 	- [Format Specifier - Pointer](#Format-Specifier---Pointer)
 	- [Format Specifier - Unsigned](#Format-Specifier---Unsigned)
-6. [Reference](#Reference)
-	- [printf](#1-printf)
+6. [Code of Willian](#Code-of-Willian)
+7. [Reference](#Reference)
+	- [printf](#printf)
 	- [Variable Argument](#Variable-Argument)
 	   - [](#)
 	   - [](#)
-7. [Tester](#Tester)
+8. [Tester](#Tester)
 
 
 ## Project outline
-
 This project is to directly implement some functions of the printf function included in the stdio.h basic library .
 The f in printf stands for formatted , meaning that formatted output is supported.
 printf from many fields of the flag of the field - , 0 ,   . , * and only the width and .precision fields, c , s , p , d , i , u , x , X , % of the type field need to be implemented.
@@ -69,3 +69,35 @@ The format specifier that appears after % is a form that receives various option
 | ' ' (space) | If no sign is going to be written, a blank space is inserted before the value |
 | # | o, x and X conversions are preceded with 0, 0x or 0X respectively |
 | 0 | Pads with zeros instead of the default spaces
+
+### Code of Willian
+
+- [`Makefile`](Makefile)
+- [`libft functions`](libft/)
+- [`header file`](includes/ft_printf.h)
+
+Main functions
+
+- [`ft_printf.c`](source/ft_printf.c)
+- [`ft_fill.c`](source/ft_fill.c)
+- [`ft_placeholder.c`](source/ft_placeholder.c)
+- [`reset_option.c`](source/reset_option.c)
+
+Conversion functions
+
+- [`screen_c.c`](source/screen_c.c)
+- [`screen_d.c`](source/screen_d.c)
+- [`screen_p.c`](source/screen_p.c)
+- [`screen_percent.c`](source/screen_percent.c)
+- [`screen_s.c`](source/screen_s.c)
+- [`screen_u.c`](source/screen_u.c)
+- [`screen_x.c`](source/screen_x.c)
+
+### Reference
+
+#### printf
+[Format specification syntax](https://docs.microsoft.com/pt-br/cpp/c-runtime-library/format-specification-syntax-printf-and-wprintf-functions?view=msvc-160)
+[printf](http://www.cplusplus.com/reference/cstdio/printf/)
+
+#### Variable Argument
+[va_arg, va_copy, va_end, va_start](https://docs.microsoft.com/pt-br/cpp/c-runtime-library/reference/va-arg-va-copy-va-end-va-start?view=msvc-160)
