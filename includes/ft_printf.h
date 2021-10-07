@@ -38,11 +38,11 @@ typedef struct s_option
 	t_bool	precision;
 	t_bool	point_precision;
 	size_t	width;
-	int		i;
-	int		j;
-	int		len;
-	int		dif;
-	int		percent;
+	int	i;
+	int	j;
+	int	len;
+	int	dif;
+	int	percent;
 	char	*number;
 	char	*hash;
 	char	*hex;
@@ -52,7 +52,7 @@ typedef struct s_option
 
 /**
  * =========================================================================
- * 									Main functions.
+ * 				Main functions.
  * =========================================================================
  */
 
@@ -69,7 +69,7 @@ typedef struct s_option
  * @param ... Optional arguments.
  * @return int
  */
-int				ft_printf(const char *formart, ...);
+int		ft_printf(const char *formart, ...);
 
 /**
  * @brief main function that fills the struct with useful information lik
@@ -79,7 +79,7 @@ int				ft_printf(const char *formart, ...);
  * @param opt struct opt type variable
  * @return const char*
  */
-const char		*ft_fill(const char *aux, t_option *opt);
+const char	*ft_fill(const char *aux, t_option *opt);
 
 /**
  * @brief function that calls other functions to print to the screen
@@ -87,88 +87,88 @@ const char		*ft_fill(const char *aux, t_option *opt);
  * @param opt struct opt type variable
  * @return int
  */
-int				ft_placeholder(t_option *opt);
+int		ft_placeholder(t_option *opt);
 
 /**
  * @brief function that returns struct t_option to initial state
  *
  * @param opt struct opt type variable
  */
-void			reset_option(t_option *opt);
+void		reset_option(t_option *opt);
 
 /**
  * =========================================================================
- * 									Print by type.
+ * 				Print by type.
  * =========================================================================
  */
-int				screen_c(t_option *opt);
-int				screen_d(t_option *opt);
-int				screen_p(t_option *opt);
-int				screen_percent(t_option *opt);
-int				screen_s(t_option *opt);
-int				screen_u(t_option *opt);
-int				screen_x(t_option *opt);
+int		screen_c(t_option *opt);
+int		screen_d(t_option *opt);
+int		screen_p(t_option *opt);
+int		screen_percent(t_option *opt);
+int		screen_s(t_option *opt);
+int		screen_u(t_option *opt);
+int		screen_x(t_option *opt);
 
 /**
  * =========================================================================
- * 									Anexx 1.
+ * 					Anexx 1.
  * =========================================================================
  */
-void			exec(t_option *opt);
-void			verify(t_option *opt);
-void			precision(t_option *opt);
-void			width_space(t_option *opt);
-void			width_zero(t_option *opt);
+void		exec(t_option *opt);
+void		verify(t_option *opt);
+void		precision(t_option *opt);
+void		width_space(t_option *opt);
+void		width_zero(t_option *opt);
 
 /**
  * =========================================================================
- * 									Anexx 2.
+ * 					Anexx 2.
  * =========================================================================
  */
-void			precision_width(t_option *opt);
-void			precision_width_minus(t_option *opt);
-void			print_space_plus(t_option *opt);
-int				with_flag_minus(t_option *opt);
-int				no_flag(t_option *opt);
+void		precision_width(t_option *opt);
+void		precision_width_minus(t_option *opt);
+void		print_space_plus(t_option *opt);
+int		with_flag_minus(t_option *opt);
+int		no_flag(t_option *opt);
 
 /**
  * =========================================================================
- * 									Anexx 3.
+ * 					Anexx 3.
  * =========================================================================
  */
-void			space(char *str, t_option *opt);
-void			null_precision(t_option *opt);
-int				s_precision(char *str, t_option *opt);
-int				s_width(char *str, t_option *opt);
-int				null_width(char *str, t_option *opt);
+void		space(char *str, t_option *opt);
+void		null_precision(t_option *opt);
+int		s_precision(char *str, t_option *opt);
+int		s_width(char *str, t_option *opt);
+int		null_width(char *str, t_option *opt);
 
 /**
  * =========================================================================
- * 									Anexx 4.
+ * 					Anexx 4.
  * =========================================================================
  */
-void			number_print(char *s, t_option *opt);
-int				u_blank(int n, t_option *opt);
-int				u_print_zero(int n, t_option *opt);
-void			u_minus_width(t_option *opt);
-int				u_zero_width(int n, t_option *opt);
+void		number_print(char *s, t_option *opt);
+int		u_blank(int n, t_option *opt);
+int		u_print_zero(int n, t_option *opt);
+void		u_minus_width(t_option *opt);
+int		u_zero_width(int n, t_option *opt);
 
 /**
  * =========================================================================
- * 									Anexx 5.
+ * 					Anexx 5.
  * =========================================================================
  */
-void			u_minus_width_precision(int n, char *s, t_option *opt);
-void			u_width_precision(int n, char *s, t_option *opt);
-void			u_flag_no(int n, char *s, t_option *opt);
-void			u_minus_flag(int n, char *s, t_option *opt);
+void		u_minus_width_precision(int n, char *s, t_option *opt);
+void		u_width_precision(int n, char *s, t_option *opt);
+void		u_flag_no(int n, char *s, t_option *opt);
+void		u_minus_flag(int n, char *s, t_option *opt);
 
 /**
  * =========================================================================
- * 									Anexx 6.
+ * 					Anexx 6.
  * =========================================================================
  */
-char			*itoa_hex(unsigned long n, char *hex);
-int				with_flag_zero(t_option *opt);
+char		*itoa_hex(unsigned long n, char *hex);
+int		with_flag_zero(t_option *opt);
 
 #endif
