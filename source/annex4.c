@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: wrosendo <wrosendo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/09 17:36:18 by wrosendo          #+#    #+#             */
-/*   Updated: 2021/09/16 21:14:37 by wrosendo         ###   ########.fr       */
+/*   Created: 2021/10/07 08:54:35 by wrosendo          #+#    #+#             */
+/*   Updated: 2021/10/07 08:58:07 by wrosendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	number_print(char *s, t_option *opt)
 	(*opt).i += i;
 }
 
-int	u_blank(int	n, t_option *opt)
+int	u_blank(int n, t_option *opt)
 {
 	int	dif;
 	int	i;

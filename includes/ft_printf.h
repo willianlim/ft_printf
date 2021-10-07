@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: wrosendo <wrosendo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/09 17:53:16 by wrosendo          #+#    #+#             */
-/*   Updated: 2021/09/17 20:06:42 by wrosendo         ###   ########.fr       */
+/*   Created: 2021/10/07 08:26:13 by wrosendo          #+#    #+#             */
+/*   Updated: 2021/10/07 08:35:37 by wrosendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ typedef struct s_option
 }t_option;
 
 int				ft_printf(const char *formart, ...);
-const	char	*ft_fill(const char *aux, t_option *opt);
+const char		*ft_fill(const char *aux, t_option *opt);
 int				ft_placeholder(t_option *opt);
 void			reset_option(t_option *opt);
 int				screen_c(t_option *opt);
@@ -80,7 +80,7 @@ int				s_width(char *str, t_option *opt);
 int				null_width(char *str, t_option *opt);
 
 void			number_print(char *s, t_option *opt);
-int				u_blank(int	n, t_option *opt);
+int				u_blank(int n, t_option *opt);
 int				u_print_zero(int n, t_option *opt);
 void			u_minus_width(t_option *opt);
 int				u_zero_width(int n, t_option *opt);

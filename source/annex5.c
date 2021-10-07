@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: wrosendo <wrosendo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/09 17:36:22 by wrosendo          #+#    #+#             */
-/*   Updated: 2021/09/09 17:44:45 by wrosendo         ###   ########.fr       */
+/*   Created: 2021/10/07 08:54:46 by wrosendo          #+#    #+#             */
+/*   Updated: 2021/10/07 08:58:56 by wrosendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	u_flag_no(int n, char *s, t_option *opt)
 void	u_minus_flag(int n, char *s, t_option *opt)
 {
 	if ((*opt).precision > ft_strlen((*opt).number) && \
-	 (*opt).width > ft_strlen((*opt).number))
+	(*opt).width > ft_strlen((*opt).number))
 		u_minus_width_precision(n, s, opt);
 	else if ((*opt).precision > ft_strlen((*opt).number))
 	{

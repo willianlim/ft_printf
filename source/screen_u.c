@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: wrosendo <wrosendo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/09 17:38:16 by wrosendo          #+#    #+#             */
-/*   Updated: 2021/09/17 16:13:03 by wrosendo         ###   ########.fr       */
+/*   Created: 2021/10/07 08:56:07 by wrosendo          #+#    #+#             */
+/*   Updated: 2021/10/07 08:57:41 by wrosendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,10 @@ static void	disable_flags(t_option *opt)
 
 int	screen_u(t_option *opt)
 {
-	char		*s;
+	char			*s;
 	unsigned int	n;
 
-	n = va_arg((*opt).ap,unsigned int);
+	n = va_arg((*opt).ap, unsigned int);
 	s = u_itoa(n);
 	(*opt).number = s;
 	disable_flags(opt);
