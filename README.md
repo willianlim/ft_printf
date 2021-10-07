@@ -1,20 +1,31 @@
 # ft_printf: int   ft_printf(format, ...);
 
 ## Table of Contents
-- [ft_printf: int   ft_printf(format, ...);](#ft_printf-int---ft_printfformat-)
-	- [Table of Contents](#table-of-contents)
-	- [Project outline](#project-outline)
-	- [Printf Format Placeholder](#printf-format-placeholder)
-		- [Printf Format Placeholder Syntax](#printf-format-placeholder-syntax)
-		- [Conversion](#conversion)
-		- [Flags](#flags)
-		- [Variable Argument](#variable-argument)
-			- [What is Variable Argument?](#what-is-variable-argument)
-			- [Variadic Function Format](#variadic-function-format)
-			- [C Variadic Macros](#c-variadic-macros)
-		- [Code of Willian](#code-of-willian)
-		- [Reference](#reference)
-		- [Tester](#tester)
+1. [Project outline](#Project-outline)
+2. [Printf Format Placeholder](#Printf-Format-Placeholder)
+	- [Printf Format Placeholder Syntax](#Printf-Format-Placeholder-Syntax)
+	- [Conversion](#Conversion)
+	- [Flags](#Flags)
+3. [Variable Argument](#Variable-Argument)
+	- [What is Variable Argument?](#What-is-Variable-Argument?)
+	- [Variadic Function Format](#Variadic-Function-Format)
+	- [C Variadic Macros](#C-Variadic-Macros)
+4. [Format Specifier Rules](#Format-Specifier-Rules)
+	- [Rule summary form](#Rule-summary-form)
+	- [](#)
+	   - [](#)
+	- [](#)
+	- [](#)
+5. [See diagrams for each format specifier](#See-diagrams-for-each-format-specifier)
+	- [General workflow](#General-workflow)
+	- [Format Specifier - Char](#Format-Specifier---Char)
+	- [Format Specifier - String](#Format-Specifier---String)
+	- [Format Specifier - Interger](#Format-Specifier---Interger)
+	- [Format Specifier - Pointer](#Format-Specifier---Pointer)
+	- [Format Specifier - Unsigned](#Format-Specifier---Unsigned)
+6. [Code of Willian](#Code-of-Willian)
+7. [Reference](#Reference)
+8. [Tester](#Tester)
 
 
 ## Project outline
@@ -57,11 +68,10 @@ The format specifier that appears after % is a form that receives various option
 
 ### Variable Argument
 
-#### What is Variable Argument?
 
-#### Variadic Function Format
 
-#### C Variadic Macros
+
+
 
 ### Code of Willian
 
@@ -93,7 +103,7 @@ Conversion functions
 
 [printf](http://www.cplusplus.com/reference/cstdio/printf/)
 
-[What's the difference btween %i and]
+[What's the difference btween]
 
 <h4>Variable Argument</h4>
 
