@@ -56,6 +56,50 @@ The format specifier that appears after % is a form that receives various option
 | s | char * | Prints a string |
 | p | void * | Prints a pointer's address |
 
+Diference betwen typde d and i
+
+```c
+#include <stdio.h>
+
+int main(int argc, const char *argv)
+{
+    int    a, b, c = 0, d = 0, e = 0, f = 0;
+
+    printf("1- Passando por argumento\n\n");
+
+    a = 0xa;
+    b = 10;
+    printf("%d %d\n", a, b);
+    printf("%i %i\n\n", a, b);
+
+    printf("2- Agora se eu peço para o usuário digitar esses mesmos valores e recebo-os com o scanf() ...\n\n");
+
+    printf("================  TYPE d  ===============\n");
+    printf("digite o valor 0xa (10 em hexadecimal):\n");
+    scanf("%d", &c);
+    setbuf(stdin, NULL); // limpa o buffer do teclado
+    printf("output: %d\n", c);
+    printf("digite o valor 10:\n");
+    scanf("%d", &d);
+    setbuf(stdin, NULL); // limpa o buffer do teclado
+    printf("output: %d\n", d);
+    printf("=========================================\n");
+
+    printf("================  TYPE i  ===============\n");
+    printf("digite o valor 0xa (10 em hexadecimal):\n");
+    scanf("%i", &e);
+    fflush(stdin); // limpa o buffer do teclado
+    printf("output: %i\n", e);
+    printf("digite o valor 10:\n");
+    scanf("%i", &f);
+    setbuf(stdin, NULL); // limpa o buffer do teclado
+    printf("output: %i\n", f);
+    printf("=========================================\n");
+
+    return (0);
+}
+```
+
 ### Flags
 
 | Flag | Effect |
@@ -103,7 +147,7 @@ Conversion functions
 
 [printf](http://www.cplusplus.com/reference/cstdio/printf/)
 
-[What's the difference btween]
+[%d vs %i](https://stackoverflow.com/questions/1893490/what-is-the-difference-between-conversion-specifiers-i-and-d-in-formatted-io-f)
 
 <h4>Variable Argument</h4>
 
