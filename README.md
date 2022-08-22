@@ -1,4 +1,4 @@
-# [`ft_printf`](https://github.com/willianlim/get_next_line/blob/main/pdf/en.subject.pdf)
+# [`ft_printf`](https://github.com/willianlim/ft_printf/blob/master/pdf/en.subject.pdf)
 
 Foobar is a Python library for dealing with word pluralization.
 
